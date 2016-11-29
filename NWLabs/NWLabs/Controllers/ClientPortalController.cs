@@ -11,15 +11,15 @@ namespace NWLabs.Controllers
         // GET: ClientPortal
         public ActionResult Index()
         {
-            return RedirectToAction("Account Summary");
+            return RedirectToAction("AccountSummary");
         }
 
         // Account Summary
 
-        public ActionResult AccountSummary()
-        {
-            return RedirectToAction("Index", "AccountSummary");
-        }
+        //public ActionResult AccountSummary()
+        //{
+        //    return RedirectToAction("Index", "AccountSummary");
+        //}
 
         // Quotes - Future
         public ActionResult Quotes()
