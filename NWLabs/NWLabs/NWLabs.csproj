@@ -236,6 +236,8 @@
     <Content Include="Areas\ClientPortal\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\ClientPortal\Views\AccountSummary\Index.cshtml" />
     <Content Include="Areas\ClientPortal\Views\Refferals\Index.cshtml" />
+    <Content Include="Areas\ClientPortal\Views\Shared\_ComingSoon.cshtml" />
+    <Content Include="Areas\ClientPortal\Views\AccountProfile\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -287,7 +289,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\ClientPortal\Models\" />
-    <Folder Include="Areas\ClientPortal\Views\AccountProfile\" />
     <Folder Include="Areas\ClientPortal\Views\Billing\" />
     <Folder Include="Areas\ClientPortal\Views\MessageCenter\" />
     <Folder Include="Areas\ClientPortal\Views\Orders\" />
