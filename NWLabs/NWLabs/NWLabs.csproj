@@ -242,6 +242,8 @@
     <Content Include="Areas\ClientPortal\Views\Quotes\RequestQuote.cshtml" />
     <Content Include="Areas\ClientPortal\Views\Quotes\PendingRequest.cshtml" />
     <Content Include="Areas\ClientPortal\Views\Quotes\ReceivedQuoted.cshtml" />
+    <Content Include="Areas\ClientPortal\Views\MessageCenter\Index.cshtml" />
+    <Content Include="Areas\ClientPortal\Views\MessageCenter\Message.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -294,7 +296,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\ClientPortal\Models\" />
     <Folder Include="Areas\ClientPortal\Views\Billing\" />
-    <Folder Include="Areas\ClientPortal\Views\MessageCenter\" />
     <Folder Include="Areas\ClientPortal\Views\Orders\" />
     <Folder Include="Areas\ClientPortal\Views\Reports\" />
     <Folder Include="Areas\ClientPortal\Views\Tickets\" />
