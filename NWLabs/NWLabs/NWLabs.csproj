@@ -238,6 +238,10 @@
     <Content Include="Areas\ClientPortal\Views\Refferals\Index.cshtml" />
     <Content Include="Areas\ClientPortal\Views\Shared\_ComingSoon.cshtml" />
     <Content Include="Areas\ClientPortal\Views\AccountProfile\Index.cshtml" />
+    <Content Include="Areas\ClientPortal\Views\Quotes\Index.cshtml" />
+    <Content Include="Areas\ClientPortal\Views\Quotes\RequestQuote.cshtml" />
+    <Content Include="Areas\ClientPortal\Views\Quotes\PendingRequest.cshtml" />
+    <Content Include="Areas\ClientPortal\Views\Quotes\ReceivedQuoted.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -292,7 +296,6 @@
     <Folder Include="Areas\ClientPortal\Views\Billing\" />
     <Folder Include="Areas\ClientPortal\Views\MessageCenter\" />
     <Folder Include="Areas\ClientPortal\Views\Orders\" />
-    <Folder Include="Areas\ClientPortal\Views\Quotes\" />
     <Folder Include="Areas\ClientPortal\Views\Reports\" />
     <Folder Include="Areas\ClientPortal\Views\Tickets\" />
     <Folder Include="Views\ClientPortal\" />
