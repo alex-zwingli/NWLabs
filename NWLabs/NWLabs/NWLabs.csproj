@@ -196,7 +196,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\ClientPortal\ClientPortalAreaRegistration.cs" />
+    <Compile Include="Areas\ClientPortal\Controllers\AccountProfileController.cs" />
     <Compile Include="Areas\ClientPortal\Controllers\AccountSummaryController.cs" />
+    <Compile Include="Areas\ClientPortal\Controllers\BillingController.cs" />
+    <Compile Include="Areas\ClientPortal\Controllers\MessageCenterController.cs" />
+    <Compile Include="Areas\ClientPortal\Controllers\OrdersController.cs" />
+    <Compile Include="Areas\ClientPortal\Controllers\QuotesController.cs" />
+    <Compile Include="Areas\ClientPortal\Controllers\RefferalsController.cs" />
+    <Compile Include="Areas\ClientPortal\Controllers\ReportsController.cs" />
+    <Compile Include="Areas\ClientPortal\Controllers\TicketsController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AccountSummaryController.cs" />
     <Compile Include="Controllers\ClientPortalController.cs" />
@@ -278,6 +286,14 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\ClientPortal\Models\" />
+    <Folder Include="Areas\ClientPortal\Views\AccountProfile\" />
+    <Folder Include="Areas\ClientPortal\Views\Billing\" />
+    <Folder Include="Areas\ClientPortal\Views\MessageCenter\" />
+    <Folder Include="Areas\ClientPortal\Views\Orders\" />
+    <Folder Include="Areas\ClientPortal\Views\Quotes\" />
+    <Folder Include="Areas\ClientPortal\Views\Refferals\" />
+    <Folder Include="Areas\ClientPortal\Views\Reports\" />
+    <Folder Include="Areas\ClientPortal\Views\Tickets\" />
     <Folder Include="Views\ClientPortal\" />
   </ItemGroup>
   <ItemGroup>

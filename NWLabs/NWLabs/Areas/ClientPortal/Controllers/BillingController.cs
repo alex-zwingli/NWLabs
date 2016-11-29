@@ -6,13 +6,12 @@ using System.Web.Mvc;
 
 namespace NWLabs.Areas.ClientPortal.Controllers
 {
-    public class AccountSummaryController : Controller
+    public class BillingController : Controller
     {
-        // GET: ClientPortal/AccountSummary
+        // GET: ClientPortal/Billing
         public ActionResult Index()
         {
             return View();
         }
-
     }
 }
