@@ -222,7 +222,10 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -244,6 +247,15 @@
     <Content Include="Areas\ClientPortal\Views\Quotes\ReceivedQuoted.cshtml" />
     <Content Include="Areas\ClientPortal\Views\MessageCenter\Index.cshtml" />
     <Content Include="Areas\ClientPortal\Views\MessageCenter\Message.cshtml" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="Areas\ClientPortal\Views\Billing\Index.cshtml" />
+    <Content Include="Areas\ClientPortal\Views\Orders\Index.cshtml" />
+    <Content Include="Areas\ClientPortal\Views\Reports\Index.cshtml" />
+    <Content Include="Areas\ClientPortal\Views\Tickets\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -295,10 +307,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\ClientPortal\Models\" />
-    <Folder Include="Areas\ClientPortal\Views\Billing\" />
-    <Folder Include="Areas\ClientPortal\Views\Orders\" />
-    <Folder Include="Areas\ClientPortal\Views\Reports\" />
-    <Folder Include="Areas\ClientPortal\Views\Tickets\" />
     <Folder Include="Views\ClientPortal\" />
   </ItemGroup>
   <ItemGroup>

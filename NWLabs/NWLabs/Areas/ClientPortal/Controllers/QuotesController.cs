@@ -23,13 +23,13 @@ namespace NWLabs.Areas.ClientPortal.Controllers
         // POST: Request Quote
 
         // GET: Pending Quote Requests
-        public ActionResult PendingRequest()
+        public ActionResult PendingQuote()
         {
             return View();
         }
 
         // GET: Received Quotes
-        public ActionResult ReceivedQuoted()
+        public ActionResult Quotes()
         {
             return View();
         }
