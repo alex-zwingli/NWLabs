@@ -13,5 +13,25 @@ namespace NWLabs.Areas.StaffPortal.Controllers
         {
             return View(); // Coming Soon
         }
+
+        public ActionResult Scheduling()
+        {
+            return View();
+        }
+
+        public ActionResult TestTubes()
+        {
+            return View();
+        }
+
+        public ActionResult Assay()
+        {
+            return View();
+        }
+
+        public ActionResult TestCompound()
+        {
+            return View();
+        }
     }
 }

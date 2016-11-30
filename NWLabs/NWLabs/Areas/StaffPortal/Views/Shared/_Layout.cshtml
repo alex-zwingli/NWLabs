@@ -61,45 +61,55 @@
         </div>
         <div class="row">
             <ul class="nav nav-tabs nav-justified">
-                <li class="dropdown @ViewBag.">
-                    @Html.ActionLink("Tesing", "Index", "Testing", new { @class="dropdown-toggle" })
+                <li class="dropdown @ViewBag.statusTesting">
+                    <a class="dropdown-toggle @ViewBag.statusTesting" href="/StaffPortal/Testing">Testing</a>
                     <ul class="dropdown-menu">
-                        @*<li>@Html.ActionLink("", "", "")</li>*@
+                        <li>@Html.ActionLink("Scheduling", "Schedule", "Testing")</li>
+                        <li>@Html.ActionLink("Compound Testing", "TestCompound", "Testing")</li>
+                        <li>@Html.ActionLink("Assay", "Assay", "Testing")</li>
                     </ul>
                 </li>
-                <li class="dropdown @ViewBag.">
-                    @Html.ActionLink("Receieving", "Index", "Receiving", new { @class = "dropdown-toggle" })
+                <li class="dropdown @ViewBag.statusReceiving">
+                    <a class="dropdown-toggle @ViewBag.statusReceiving" href="/StaffPortal/Receiving">Receiving</a>
                     <ul class="dropdown-menu">
                         <li>@Html.ActionLink("New Compound", "New", "Receiving")</li>
                         @*<li>@Html.ActionLink("", "", "")</li>*@
                     </ul>
                 </li>
-                <li class="dropdown @ViewBag.">
-                    @Html.ActionLink("Quotes", "Index", "Quotes", new { @class = "dropdown-toggle" })
+                <li class="dropdown @ViewBag.statusQuotes ">
+                    <a class="dropdown-toggle @ViewBag.statusQuotes" href="/StaffPortal/Quotes">Quotes</a>
                     <ul class="dropdown-menu">
                         @*<li>@Html.ActionLink("", "", "")</li>*@
                     </ul>
                 </li>
-                <li class="dropdown @ViewBag.">
-                    @Html.ActionLink("Clients", "Index", "Clients", new { @class = "dropdown-toggle" })
+                <li class="dropdown @ViewBag.statusWorkOrders ">
+                    <a class="dropdown-toggle @ViewBag.statusWorkOrders" href="/StaffPortal/WorkOrders">WorkOrders</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Pending", "Pending", "WorkOrders")</li>
+                        <li>@Html.ActionLink("Approved", "Approved", "WorkOrders")</li>
+                        <li>@Html.ActionLink("Completed", "Completed", "WorkOrders")</li>
+                    </ul>
+                </li>
+                <li class="dropdown @ViewBag.statusClients">
+                    <a class="dropdown-toggle @ViewBag.statusClients" href="/StaffPortal/Clients">Clients</a>
                     <ul class="dropdown-menu">
                         @*<li>@Html.ActionLink("", "", "")</li>*@
                     </ul>
                 </li>
-                <li class="dropdown @ViewBag.">
-                    @Html.ActionLink("Catalog", "Index", "Catalog", new { @class = "dropdown-toggle" })
+                <li class="dropdown @ViewBag.statusCatalog">
+                    <a class="dropdown-toggle @ViewBag.statusCatalog" href="/StaffPortal/Catalog">Catalog</a>
                     <ul class="dropdown-menu">
                         @*<li>@Html.ActionLink("", "", "")</li>*@
                     </ul>
                 </li>
-                <li class="dropdown @ViewBag.">
-                    @Html.ActionLink("Tickets", "Index", "Tickets", new { @class = "dropdown-toggle" })
+                <li class="dropdown @ViewBag.statusTickets">
+                    <a class="dropdown-toggle @ViewBag.statusTickets" href="/StaffPortal/Tickets">Tickets</a>
                     <ul class="dropdown-menu">
                         @*<li>@Html.ActionLink("", "", "")</li>*@
                     </ul>
                 </li>
-                <li class="dropdown @ViewBag.">
-                    @Html.ActionLink("Reports", "Index", "Reports", new { @class = "dropdown-toggle" })
+                <li class="dropdown @ViewBag.statusReports">
+                    <a class="dropdown-toggle @ViewBag.statusReports" href="/StaffPortal/Reports">Reports</a>
                     <ul class="dropdown-menu">
                         @*<li>@Html.ActionLink("", "", "")</li>*@
                     </ul>

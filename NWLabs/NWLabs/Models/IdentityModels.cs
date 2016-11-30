@@ -29,5 +29,9 @@ namespace NWLabs.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<NWLabs.Areas.StaffPortal.Models.Compound> Compounds { get; set; }
+
+        public System.Data.Entity.DbSet<NWLabs.Areas.StaffPortal.Models.WorkOrders> WordOrders { get; set; }
     }
 }

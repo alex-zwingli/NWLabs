@@ -64,7 +64,7 @@ namespace NWLabs.Controllers
         }
 
         // Profile - Future
-        public ActionResult Profile()
+        public new ActionResult Profile()
         {
             return RedirectToAction("Account Summary");
         }

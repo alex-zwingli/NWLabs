@@ -1,0 +1,102 @@
+﻿@model NWLabs.Areas.StaffPortal.Models.WorkOrders
+
+@{
+    ViewBag.Title = "Approve";
+}
+
+<h2 style="text-align: center; margin-bottom: 20px;">Approve Word Order<br></h2>
+
+<div class="row">
+    <div class="col-sm-4 col-sm-offset-2">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Work Order Details</h3>
+            </div>
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.CompoundType)
+                    </dt>
+
+                    <dd>
+                        Type Two
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.CompoundWeight)
+                    </dt>
+
+                    <dd>
+                        47 g
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.ReceiveShipment)
+                    </dt>
+
+                    <dd>
+                        False
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.status)
+                    </dt>
+
+                    <dd>
+                        Pending
+                    </dd>
+
+
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Special Discount</h3>
+            </div>
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt>
+                        Reason
+                    </dt>
+
+                    <dd>
+                        High Order Volume
+                    </dd>
+
+                    <dt>
+                        Discount Rate
+                    </dt>
+
+                    <dd>
+                        12%
+                    </dd>
+
+                    <dt>
+                        New Order Price
+                    </dt>
+
+                    <dd>
+                        $1,056.00
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+<center>
+    <div class="btn-group">
+        <button class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Approve <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li><a href="#">With Discount</a></li>
+            <li><a href="#">Without Discount</a></li>
+        </ul>
+    </div> 
+    <a href="#" class="btn btn-warning">Reject/Delay</a>
+</center>
+
+<p>
+    @Html.ActionLink("Back to List", "Pending")
+</p>

@@ -1,0 +1,146 @@
+﻿@model IEnumerable<NWLabs.Areas.StaffPortal.Models.WorkOrders>
+
+@{
+    ViewBag.Title = "Pending";
+}
+
+
+<h2 style="text-align: center; margin-bottom: 20px;">Pending<br /></h2>
+
+<div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Work Orders</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.CompoundType)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.CompoundWeight)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ReceiveShipment)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.status)
+                        </th>
+                        <th>
+                            Actions
+                        </th>
+                    </tr>
+
+                    <!-- Example 1 -->
+                    <tr>
+                        <td>
+                            Type One
+                        </td>
+                        <td>
+                            451 g
+                        </td>
+                        <td>
+                            True
+                        </td>
+                        <td>
+                            Pending
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit") |
+                            @Html.ActionLink("Approve", "Approve") |
+                            @Html.ActionLink("Delete", "Delete")
+                        </td>
+                    </tr>
+
+                    <!-- Example 2 -->
+                    <tr>
+                        <td>
+                            Type Four
+                        </td>
+                        <td>
+                            45 g
+                        </td>
+                        <td>
+                            True
+                        </td>
+                        <td>
+                            Pending
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit") |
+                            @Html.ActionLink("Approve", "Approve") |
+                            @Html.ActionLink("Delete", "Delete")
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <!-- Example 3 -->
+                        <td>
+                            Type Two
+                        </td>
+                        <td>
+                            87 g
+                        </td>
+                        <td>
+                            True
+                        </td>
+                        <td>
+                            Pending
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit") |
+                            @Html.ActionLink("Approve", "Approve") |
+                            @Html.ActionLink("Delete", "Delete")
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <!-- Example 4 -->
+                        <td>
+                            Type Two
+                        </td>
+                        <td>
+                            47 g
+                        </td>
+                        <td>
+                            False
+                        </td>
+                        <td>
+                            Pending
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit") |
+                            @Html.ActionLink("Approve", "Approve") |
+                            @Html.ActionLink("Delete", "Delete")
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <!-- Example 5 -->
+                        <td>
+                            Type Six
+                        </td>
+                        <td>
+                            21 g
+                        </td>
+                        <td>
+                            True
+                        </td>
+                        <td>
+                            Pending
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit") |
+                            @Html.ActionLink("Approve", "Approve") |
+                            @Html.ActionLink("Delete", "Delete")
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

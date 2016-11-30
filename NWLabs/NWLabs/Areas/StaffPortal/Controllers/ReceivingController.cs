@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NWLabs.Areas.StaffPortal.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,7 +18,9 @@ namespace NWLabs.Areas.StaffPortal.Controllers
         // Enter new compound information
         public ActionResult New()
         {
-            return View(/*Pass 'ClientCompound' Model*/);
+            CustomerCompound CustomerCompound = new CustomerCompound();
+
+            return View(CustomerCompound);
         }
     }
 
