@@ -13,5 +13,14 @@ namespace NWLabs.Areas.StaffPortal.Controllers
         {
             return View(); // Coming Soon
         }
+
+        // Enter new compound information
+        public ActionResult New()
+        {
+            return View(/*Pass 'ClientCompound' Model*/);
+        }
     }
+
+
+
 }

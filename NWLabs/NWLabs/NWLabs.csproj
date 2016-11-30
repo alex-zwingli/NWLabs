@@ -212,6 +212,9 @@
     <Compile Include="Areas\StaffPortal\Controllers\ReportsController.cs" />
     <Compile Include="Areas\StaffPortal\Controllers\TestingController.cs" />
     <Compile Include="Areas\StaffPortal\Controllers\TicketsController.cs" />
+    <Compile Include="Areas\StaffPortal\Models\Customer.cs" />
+    <Compile Include="Areas\StaffPortal\Models\Compound.cs" />
+    <Compile Include="Areas\StaffPortal\Models\CustomerCompound.cs" />
     <Compile Include="Areas\StaffPortal\StaffPortalAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AccountSummaryController.cs" />
@@ -270,6 +273,7 @@
     <Content Include="Areas\StaffPortal\web.config" />
     <Content Include="Areas\StaffPortal\Views\_ViewStart.cshtml" />
     <Content Include="Areas\StaffPortal\Views\Testing\Index.cshtml" />
+    <Content Include="Areas\StaffPortal\Views\Receiving\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -321,12 +325,11 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\ClientPortal\Models\" />
-    <Folder Include="Areas\StaffPortal\Models\" />
+    <Folder Include="Areas\StaffPortal\DAL\" />
     <Folder Include="Areas\StaffPortal\Views\Catalog\" />
     <Folder Include="Areas\StaffPortal\Views\Clients\" />
     <Folder Include="Areas\StaffPortal\Views\Client\" />
     <Folder Include="Areas\StaffPortal\Views\Quotes\" />
-    <Folder Include="Areas\StaffPortal\Views\Receiving\" />
     <Folder Include="Areas\StaffPortal\Views\Reports\" />
     <Folder Include="Areas\StaffPortal\Views\Tickets\" />
     <Folder Include="Views\ClientPortal\" />

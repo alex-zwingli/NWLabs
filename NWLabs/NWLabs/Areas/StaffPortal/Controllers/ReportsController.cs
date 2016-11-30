@@ -11,7 +11,7 @@ namespace NWLabs.Areas.StaffPortal.Controllers
         // GET: StaffPortal/Reports
         public ActionResult Index()
         {
-            return View(); // Coming Soon
+            return View();
         }
     }
 }
