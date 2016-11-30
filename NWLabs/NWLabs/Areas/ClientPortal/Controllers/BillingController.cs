@@ -11,7 +11,10 @@ namespace NWLabs.Areas.ClientPortal.Controllers
         // GET: ClientPortal/Billing
         public ActionResult Index()
         {
+
             return View();
         }
+
+        
     }
 }

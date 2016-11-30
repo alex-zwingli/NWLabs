@@ -3,12 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Northwest Labs</title>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
+    <!-- Default Area -->
+
 </head>
 <body>
+
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -17,24 +21,35 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Northwest Labs", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Client Portal", "Index", "AccountSummary", new { Area = "CLientPortal"}, new { })
-                </ul>
                 @Html.Partial("_LoginPartial")
             </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <img src="http://edge.neocha.com/wp-content/uploads/2013/02/BANNER-PLACEHOLDER.jpg" alt="Company Banner" />
+            </div>
+        </div>
+        <div class="row">
+            <ul class="nav nav-tabs nav-justified">
+                <li role="presentation" class="@ViewBag.statusAccountSummary">@Html.ActionLink("Account", "Index", "AccountSummary")</li>
+                <li role="presentation" class="@ViewBag.statusReports">@Html.ActionLink("Reports", "Index", "Reports")</li>
+                <li role="presentation" class="@ViewBag.statusBilling">@Html.ActionLink("Billing", "Index", "Billing")</li>
+                <li role="presentation" class="@ViewBag.statusTickets">@Html.ActionLink("Tickets", "Index", "Tickets")</li>
+                <li role="presentation" class="@ViewBag.statusQuotes">@Html.ActionLink("Quotes", "Index", "Quotes")</li>
+                <li role="presentation" class="@ViewBag.statusAccountProfile">@Html.ActionLink("Profile", "Index", "AccountProfile")</li>
+            </ul>
         </div>
     </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Integrated Solutions, Inc.</p>
         </footer>
     </div>
 
@@ -43,3 +58,63 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
+<style>
+body{
+    background:url('http://www.wallpaperup.com/uploads/wallpapers/2012/10/21/20181/cad2441dd3252cf53f12154412286ba0.jpg');
+    padding:50px;
+}
+
+#login-dp{
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 49%;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc 
+}
+.btn-tw{
+    color: #fff;
+    background-color:#55acee;
+}
+.btn-tw:hover{
+    color: #fff;
+    background-color:#59b5fa;
+}
+
+media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
+
+</style>

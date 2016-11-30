@@ -13,5 +13,33 @@ namespace NWLabs.Areas.ClientPortal.Controllers
         {
             return View();
         }
+
+        // GET: Request Quote
+        public new ActionResult Request()
+        {
+            return View(/*model*/);
+        }
+
+        // POST: Request Quote
+
+        // GET: Pending Quote Requests
+        public ActionResult Pending()
+        {
+            return View();
+        }
+
+        // GET: Received Quotes
+        public ActionResult Quotes()
+        {
+            return View();
+        }
+
+        // GET: Quote details
+        public ActionResult Details()
+        {
+            return View(); //void
+        }
+
+
     }
 }

@@ -6,7 +6,38 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+    <!-- Area: CLientProfile -->
 </head>
+
+@{
+    switch (@HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString())
+    {
+        case "AccountSummary":
+            ViewBag.statusAccountSummary = "active";
+            break;
+        case "Orders":
+            ViewBag.statusOrders = "active";
+            break;
+        case "Reports":
+            ViewBag.statusReports = "active";
+            break;
+        case "Billing":
+            ViewBag.statusBilling = "active";
+            break;
+        case "Tickets":
+            ViewBag.statusTickets = "active";
+            break;
+        case "Quotes":
+            ViewBag.statusQuotes = "active";
+            break;
+        case "AccountProfile":
+            ViewBag.statusAccountProfile = "active";
+            break;
+    }
+}
+}
+
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -16,14 +47,60 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Northwest Labs", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                </ul>
+                @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <img src="http://edge.neocha.com/wp-content/uploads/2013/02/BANNER-PLACEHOLDER.jpg" alt="Company Banner" />
+            </div>
+        </div>
+        <div class="row">
+            <ul class="nav nav-tabs nav-justified">
+                <li role="presentation" class="@ViewBag.statusAccountSummary">@Html.ActionLink("Account", "Index", "AccountSummary")</li>
+                <li class="dropdown @ViewBag.statusOrders">
+                    <a class="dropdown-toggle" href="/ClientPortal/Orders/Index">Orders</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Order Details", "OrderDetails", "Orders")</li>
+                        <li>@Html.ActionLink("Submissions", "Submissions", "Orders")</li>
+                        <li>@Html.ActionLink("Testing & Results", "Testing", "Orders")</li>
+                        <li>@Html.ActionLink("Permissions", "Permissions", "Orders")</li>
+                    </ul>
+                </li>
+                <li role="presentation" class="@ViewBag.statusReports">@Html.ActionLink("Reports", "Index", "Reports")</li>
+                <li class="dropdown @ViewBag.statusBilling">
+                    <a class="dropdown-toggle" href="/ClientPortal/Billing/Index">Billing</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Invoices", "Invoices", "Billing")</li>
+                        <li>@Html.ActionLink("Payments", "Payments", "Billing")</li>
+                        <li>@Html.ActionLink("Payment Information", "Payment", "AccountProfile")</li>
+                    </ul>
+                </li>
+                <li class="dropdown @ViewBag.statusTickets">
+                    <a class="dropdown-toggle" href="/ClientPortal/Tickets/Index">Tickets</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Submissions", "Tickets", "Tickets")</li>
+                        <li>@Html.ActionLink("New Ticket", "New", "Tickets")</li>
+                    </ul>
+                </li>
+                <li class="dropdown @ViewBag.statusQuotes">
+                    <a class="dropdown-toggle" href="/ClientPortal/Quotes/Index">Quotes</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Request Quote", "Request", "Quotes")</li>
+                        <li>@Html.ActionLink("Pending Quotes", "Pending", "Quotes")</li>
+                        <li>@Html.ActionLink("Quotes", "Quotes", "Quotes")</li>
+                    </ul>
+                </li>
+                <li role="presentation" class="@ViewBag.statusAccountProfile">@Html.ActionLink("Profile", "Index", "AccountProfile")</li>
+            </ul>
+        </div>
+    </div>
+
 
     <div class="container body-content">
         @RenderBody()
@@ -38,3 +115,44 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
+
+<style>
+    .dropdown-menu .sub-menu {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    margin-top: -1px;
+}
+
+.dropdown-menu li:hover .sub-menu {
+    visibility: visible;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-tabs .dropdown-menu, .nav-pills .dropdown-menu, .navbar .dropdown-menu {
+    margin-top: 0;
+}
+
+.navbar .sub-menu:before {
+    border-bottom: 7px solid transparent;
+    border-left: none;
+    border-right: 7px solid rgba(0, 0, 0, 0.2);
+    border-top: 7px solid transparent;
+    left: -7px;
+    top: 10px;
+}
+.navbar .sub-menu:after {
+    border-top: 6px solid transparent;
+    border-left: none;
+    border-right: 6px solid #fff;
+    border-bottom: 6px solid transparent;
+    left: 10px;
+    top: 11px;
+    left: -6px;
+}
+</style>
