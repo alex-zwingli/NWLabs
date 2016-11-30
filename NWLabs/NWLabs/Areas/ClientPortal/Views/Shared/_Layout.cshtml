@@ -47,6 +47,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                @Html.ActionLink("Northwest Labs", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 @Html.Partial("_LoginPartial")
@@ -72,13 +73,26 @@
                     </ul>
                 </li>
                 <li role="presentation" class="@ViewBag.statusReports">@Html.ActionLink("Reports", "Index", "Reports")</li>
-                <li role="presentation" class="@ViewBag.statusBilling">@Html.ActionLink("Billing", "Index", "Billing")</li>
-                <li role="presentation" class="@ViewBag.statusTickets">@Html.ActionLink("Tickets", "Index", "Tickets")</li>
+                <li class="dropdown @ViewBag.statusBilling">
+                    <a class="dropdown-toggle" href="/ClientPortal/Billing/Index">Billing</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Invoices", "Invoices", "Billing")</li>
+                        <li>@Html.ActionLink("Payments", "Payments", "Billing")</li>
+                        <li>@Html.ActionLink("Payment Information", "Payment", "AccountProfile")</li>
+                    </ul>
+                </li>
+                <li class="dropdown @ViewBag.statusTickets">
+                    <a class="dropdown-toggle" href="/ClientPortal/Tickets/Index">Tickets</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Submissions", "Tickets", "Tickets")</li>
+                        <li>@Html.ActionLink("New Ticket", "New", "Tickets")</li>
+                    </ul>
+                </li>
                 <li class="dropdown @ViewBag.statusQuotes">
                     <a class="dropdown-toggle" href="/ClientPortal/Quotes/Index">Quotes</a>
                     <ul class="dropdown-menu">
-                        <li>@Html.ActionLink("Request Quote", "RequestQuote", "Quotes")</li>
-                        <li>@Html.ActionLink("Pending Quotes", "PendingQuote", "Quotes")</li>
+                        <li>@Html.ActionLink("Request Quote", "Request", "Quotes")</li>
+                        <li>@Html.ActionLink("Pending Quotes", "Pending", "Quotes")</li>
                         <li>@Html.ActionLink("Quotes", "Quotes", "Quotes")</li>
                     </ul>
                 </li>

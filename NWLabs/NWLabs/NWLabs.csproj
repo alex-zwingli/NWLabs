@@ -242,9 +242,9 @@
     <Content Include="Areas\ClientPortal\Views\Shared\_ComingSoon.cshtml" />
     <Content Include="Areas\ClientPortal\Views\AccountProfile\Index.cshtml" />
     <Content Include="Areas\ClientPortal\Views\Quotes\Index.cshtml" />
-    <Content Include="Areas\ClientPortal\Views\Quotes\RequestQuote.cshtml" />
-    <Content Include="Areas\ClientPortal\Views\Quotes\PendingRequest.cshtml" />
-    <Content Include="Areas\ClientPortal\Views\Quotes\ReceivedQuoted.cshtml" />
+    <Content Include="Areas\ClientPortal\Views\Quotes\Request.cshtml" />
+    <Content Include="Areas\ClientPortal\Views\Quotes\Pending.cshtml" />
+    <Content Include="Areas\ClientPortal\Views\Quotes\Quotes.cshtml" />
     <Content Include="Areas\ClientPortal\Views\MessageCenter\Index.cshtml" />
     <Content Include="Areas\ClientPortal\Views\MessageCenter\Message.cshtml" />
     <Content Include="fonts\FontAwesome.otf" />

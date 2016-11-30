@@ -15,7 +15,7 @@ namespace NWLabs.Areas.ClientPortal.Controllers
         }
 
         // GET: Request Quote
-        public ActionResult RequestQuote()
+        public new ActionResult Request()
         {
             return View(/*model*/);
         }
@@ -23,7 +23,7 @@ namespace NWLabs.Areas.ClientPortal.Controllers
         // POST: Request Quote
 
         // GET: Pending Quote Requests
-        public ActionResult PendingQuote()
+        public ActionResult Pending()
         {
             return View();
         }
@@ -32,6 +32,12 @@ namespace NWLabs.Areas.ClientPortal.Controllers
         public ActionResult Quotes()
         {
             return View();
+        }
+
+        // GET: Quote details
+        public ActionResult Details()
+        {
+            return View(); //void
         }
 
 

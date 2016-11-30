@@ -13,5 +13,25 @@ namespace NWLabs.Areas.ClientPortal.Controllers
         {
             return View();
         }
+
+        // GET: Tickets
+        public ActionResult Tickets()
+        {
+            return View();
+        }
+
+        // GET: Ticket Details
+        public ActionResult Details()
+        {
+            return View(); // Void
+        }
+
+        // GET: New Ticket
+        public ActionResult New()
+        {
+            return View(); // Void
+        }
+
+        // POST: Ticket
     }
 }
