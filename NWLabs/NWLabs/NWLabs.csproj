@@ -205,6 +205,14 @@
     <Compile Include="Areas\ClientPortal\Controllers\RefferalsController.cs" />
     <Compile Include="Areas\ClientPortal\Controllers\ReportsController.cs" />
     <Compile Include="Areas\ClientPortal\Controllers\TicketsController.cs" />
+    <Compile Include="Areas\StaffPortal\Controllers\CatalogController.cs" />
+    <Compile Include="Areas\StaffPortal\Controllers\ClientsController.cs" />
+    <Compile Include="Areas\StaffPortal\Controllers\QuotesController.cs" />
+    <Compile Include="Areas\StaffPortal\Controllers\ReceivingController.cs" />
+    <Compile Include="Areas\StaffPortal\Controllers\ReportsController.cs" />
+    <Compile Include="Areas\StaffPortal\Controllers\TestingController.cs" />
+    <Compile Include="Areas\StaffPortal\Controllers\TicketsController.cs" />
+    <Compile Include="Areas\StaffPortal\StaffPortalAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AccountSummaryController.cs" />
     <Compile Include="Controllers\ClientPortalController.cs" />
@@ -256,6 +264,12 @@
     <Content Include="Areas\ClientPortal\Views\Orders\Index.cshtml" />
     <Content Include="Areas\ClientPortal\Views\Reports\Index.cshtml" />
     <Content Include="Areas\ClientPortal\Views\Tickets\Index.cshtml" />
+    <Content Include="Areas\StaffPortal\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\StaffPortal\Views\Shared\_ComingSoon.cshtml" />
+    <Content Include="Areas\StaffPortal\_ViewStart.cshtml" />
+    <Content Include="Areas\StaffPortal\web.config" />
+    <Content Include="Areas\StaffPortal\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\StaffPortal\Views\Testing\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -307,6 +321,14 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\ClientPortal\Models\" />
+    <Folder Include="Areas\StaffPortal\Models\" />
+    <Folder Include="Areas\StaffPortal\Views\Catalog\" />
+    <Folder Include="Areas\StaffPortal\Views\Clients\" />
+    <Folder Include="Areas\StaffPortal\Views\Client\" />
+    <Folder Include="Areas\StaffPortal\Views\Quotes\" />
+    <Folder Include="Areas\StaffPortal\Views\Receiving\" />
+    <Folder Include="Areas\StaffPortal\Views\Reports\" />
+    <Folder Include="Areas\StaffPortal\Views\Tickets\" />
     <Folder Include="Views\ClientPortal\" />
   </ItemGroup>
   <ItemGroup>
