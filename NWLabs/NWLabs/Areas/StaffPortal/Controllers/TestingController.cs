@@ -33,5 +33,20 @@ namespace NWLabs.Areas.StaffPortal.Controllers
         {
             return View();
         }
+
+        public ActionResult Import()
+        {
+            return View();
+        }
+
+        public ActionResult Preview()
+        {
+            return View();
+        }
+
+        public ActionResult Schedule()
+        {
+            return View();
+        }
     }
 }

@@ -3,9 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - NW Labs</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/Layout-Page.css" rel="stylesheet" />
 
     <!-- Area: StaffPortal -->
 </head>
@@ -30,12 +31,18 @@
         case "Tickets":
             ViewBag.statusTickets = "active";
             break;
+        case "Invoicing":
+            ViewBag.statusInvoicing = "active";
+            break;
         case "Reports":
-            ViewBag.statusAccountReports = "active";
+            ViewBag.statusReports = "active";
+            break;
+        case "WorkOrders":
+            ViewBag.statusWorkOrders = "active";
             break;
     }
 }
-}
+
 
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -49,29 +56,60 @@
                 @Html.ActionLink("Northwest Labs", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                @Html.Partial("_LoginPartial")
+                <ul class="nav navbar-nav navbar-right">
+                    <li><p class="navbar-brand">Staff Portal</p></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Account</b> <span class="caret"></span></a>
+                        <ul id="login-dp" class="dropdown-menu">
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img src="https://diasp.eu/assets/user/default.png" style="max-width: 100px;" />
+                                    </div>
+                                    <div class="col-md-9">
+                                        <h2 style="margin-top: 5px; margin-bottom: 5px;">Kelly Vaughn</h2>
+                                        <h3 style="margin-top: 5px; margin-bottom: 5px;">kelly.vaughn@pharmtech.com</h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <hr />
+                                        <center><h3><a href="#">Profile</a> | <a href="#">Settings</a> | <a href="#">Logout</a></h3></center>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
-                <img src="http://edge.neocha.com/wp-content/uploads/2013/02/BANNER-PLACEHOLDER.jpg" alt="Company Banner" />
+            <div class="col-sm-12 banner-panel">
+                <div class="pull-left">
+                    <img class="banner" src="~/Content/img/ISI.jpg" />
+                </div>
+                <div class="pull-right">
+                    <img class="banner" src="~/Content/img/lab-testing.png" />
+                </div>
+                <div class="clearfix"></div>
             </div>
         </div>
         <div class="row">
-            <ul class="nav nav-tabs nav-justified">
+            <ul class="nav nav-tabs nav-justified tabs">
                 <li class="dropdown @ViewBag.statusTesting">
                     <a class="dropdown-toggle @ViewBag.statusTesting" href="/StaffPortal/Testing">Testing</a>
                     <ul class="dropdown-menu">
                         <li>@Html.ActionLink("Scheduling", "Schedule", "Testing")</li>
                         <li>@Html.ActionLink("Compound Testing", "TestCompound", "Testing")</li>
-                        <li>@Html.ActionLink("Assay", "Assay", "Testing")</li>
+                        <li>@Html.ActionLink("Import Results", "Import", "Testing")</li>
                     </ul>
                 </li>
                 <li class="dropdown @ViewBag.statusReceiving">
                     <a class="dropdown-toggle @ViewBag.statusReceiving" href="/StaffPortal/Receiving">Receiving</a>
                     <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Compound Receipt Log", "Log", "Receiving")</li>
                         <li>@Html.ActionLink("New Compound", "New", "Receiving")</li>
                         @*<li>@Html.ActionLink("", "", "")</li>*@
                     </ul>
@@ -82,8 +120,17 @@
                         @*<li>@Html.ActionLink("", "", "")</li>*@
                     </ul>
                 </li>
+                <li class="dropdown @ViewBag.statusInvoicing">
+                    <a class="dropdown-toggle" href="/StaffPortal/Invoicing">Invoicing</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("All", "All", "Invoicing")</li>
+                        <li>@Html.ActionLink("Pending", "Pending", "Invoicing")</li>
+                        <li>@Html.ActionLink("Outstanding", "Outstanding", "Invoicing")</li>
+                        <li>@Html.ActionLink("Paid", "Paid", "Invoicing")</li>
+                    </ul>
+                </li>
                 <li class="dropdown @ViewBag.statusWorkOrders ">
-                    <a class="dropdown-toggle @ViewBag.statusWorkOrders" href="/StaffPortal/WorkOrders">WorkOrders</a>
+                    <a class="dropdown-toggle @ViewBag.statusWorkOrders" href="/StaffPortal/WorkOrders">Work Orders</a>
                     <ul class="dropdown-menu">
                         <li>@Html.ActionLink("Pending", "Pending", "WorkOrders")</li>
                         <li>@Html.ActionLink("Approved", "Approved", "WorkOrders")</li>
@@ -111,6 +158,8 @@
                 <li class="dropdown @ViewBag.statusReports">
                     <a class="dropdown-toggle @ViewBag.statusReports" href="/StaffPortal/Reports">Reports</a>
                     <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Data Report", "Data", "Reports")</li>
+                        <li>@Html.ActionLink("Summary Report", "Summary", "Reports")</li>
                         @*<li>@Html.ActionLink("", "", "")</li>*@
                     </ul>
                 </li>
@@ -118,20 +167,165 @@
         </div>
     </div>
 
-    <div class="container body-content">
-        @RenderBody()
+    <div class="container body-content" style="background-color: white;">
+        <div class="page-content">
+            <hr />
+            @RenderBody()
+        </div>
+
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Integrated Solutions, Inc.</p>
         </footer>
     </div>
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
 </body>
 </html>
 
 <style>
+    .full {
+    width: 100%;	
+}
+.gap {
+	height: 30px;
+	width: 100%;
+	clear: both;
+	display: block;
+}
+.footer {
+	background: #EDEFF1;
+	height: auto;
+	padding-bottom: 30px;
+	position: relative;
+	width: 100%;
+	border-bottom: 1px solid #CCCCCC;
+	border-top: 1px solid #DDDDDD;
+}
+.footer p {
+	margin: 0;
+}
+.footer img {
+	max-width: 100%;
+}
+.footer h3 {
+	border-bottom: 1px solid #BAC1C8;
+	color: #54697E;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 27px;
+	padding: 40px 0 10px;
+	text-transform: uppercase;
+}
+.footer ul {
+	font-size: 13px;
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 0;
+	margin-top: 15px;
+	color: #7F8C8D;
+}
+.footer ul li a {
+	padding: 0 0 5px 0;
+	display: block;
+}
+.footer a {
+	color: #78828D
+}
+.supportLi h4 {
+	font-size: 20px;
+	font-weight: lighter;
+	line-height: normal;
+	margin-bottom: 0 !important;
+	padding-bottom: 0;
+}
+.newsletter-box input#appendedInputButton {
+	background: #FFFFFF;
+	display: inline-block;
+	float: left;
+	height: 30px;
+	clear: both;
+	width: 100%;
+}
+.newsletter-box .btn {
+	border: medium none;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	border-radius: 3px;
+	display: inline-block;
+	height: 40px;
+	padding: 0;
+	width: 100%;
+	color: #fff;
+}
+.newsletter-box {
+	overflow: hidden;
+}
+.bg-gray {
+	background-image: -moz-linear-gradient(center bottom, #BBBBBB 0%, #F0F0F0 100%);
+	box-shadow: 0 1px 0 #B4B3B3;
+}
+.social li {
+	background: none repeat scroll 0 0 #B5B5B5;
+	border: 2px solid #B5B5B5;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	-ms-border-radius: 50%;
+	border-radius: 50%;
+	float: left;
+	height: 36px;
+	line-height: 36px;
+	margin: 0 8px 0 0;
+	padding: 0;
+	text-align: center;
+	width: 36px;
+	transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	-webkit-transition: all 0.5s ease 0s;
+	-ms-transition: all 0.5s ease 0s;
+	-o-transition: all 0.5s ease 0s;
+}
+.social li:hover {
+	transform: scale(1.15) rotate(360deg);
+	-webkit-transform: scale(1.1) rotate(360deg);
+	-moz-transform: scale(1.1) rotate(360deg);
+	-ms-transform: scale(1.1) rotate(360deg);
+	-o-transform: scale(1.1) rotate(360deg);
+}
+.social li a {
+	color: #EDEFF1;
+}
+.social li:hover {
+	border: 2px solid #2c3e50;
+	background: #2c3e50;
+}
+.social li a i {
+	font-size: 16px;
+	margin: 0 0 0 5px;
+	color: #EDEFF1 !important;
+}
+.footer-bottom {
+	background: #E3E3E3;
+	border-top: 1px solid #DDDDDD;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.footer-bottom p.pull-left {
+	padding-top: 6px;
+}
+.payments {
+	font-size: 1.5em;	
+}
+    .banner-panel {
+        background-color: white;
+        padding: 0px 0px 0px 15px;
+    }
+
     .dropdown-menu .sub-menu {
         left: 100%;
         position: absolute;
@@ -170,4 +364,61 @@
         top: 11px;
         left: -6px;
     }
+
+    .banner {
+        max-height: 100px;
+    }
+
+    #login-dp{
+    min-width: 500px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,1);
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,1);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 49%;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc 
+}
+.btn-tw{
+    color: #fff;
+    background-color:#55acee;
+}
+.btn-tw:hover{
+    color: #fff;
+    background-color:#59b5fa;
+}
+
+media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
+
 </style>

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<NWLabs.Areas.StaffPortal.Models.Test>
+
+@{
+    ViewBag.Title = "CompoundTesting";
+}
+
+<h2>CompoundTesting</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<h1>Gift request form</h1>
+
+@using(Html.BeginForm()) {
+
+<div id="items">
+    @foreach (var test in ViewData.Model) {
+    Html.RenderPartial("TestEditor", test, new ViewDataDictionary(ViewData) {
+    {"prefix", "tests"}
+    });
+    }
+</div>
+
+<input type="submit" value="Save changes" />
+}

@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "AddSummary";
+}
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Data Summary Source Details</h3>
+            </div>
+            <!-- Details Panel -->
+            <div class="panel-body">
+                <table class="table table-striped table-hover ">
+                    <thead>
+                        <tr>
+                            <th>Work Order</th>
+                            <th>Organization Name</th>
+                            <th>LT Num</th>
+                            <th>Data Report Num</th>
+                            <th>Compile Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="1">
+                            <td><a href="#">3464</a></td>
+                            <td>PubChem Research</td>
+                            <td>014248</td>
+                            <td>2169</td>
+                            <td>2016-12-02</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+                <center><a href="#" id="clear" style="display: none;" class="btn btn-primary" onclick="compile()">Clear Filters</a></center>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Report Image -->
+<center>
+    <hr />
+    <img style="border: solid 2px grey;" class="img-responsive" src="~/Content/img/DataReport.jpg" />
+    <hr />
+</center>
+
+<div class="row">
+    <div class="col-sm-4">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Significant Findings</h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-lg-10">
+                    <textarea style="width: 100%;" class="form-control" rows="3" id="textArea"></textarea>
+                </div>
+            </div>
+        </div>
+    </div><div class="col-sm-4">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Correletions</h3>
+        </div>
+        <div class="panel-body">
+            <div class="col-lg-10">
+                <textarea style="width: 100%;" class="form-control" rows="3" id="textArea"></textarea>
+            </div>
+        </div>
+    </div>
+</div><div class="col-sm-4">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Summary of Findings</h3>
+        </div>
+        <div class="panel-body">
+            <div class="col-lg-10">
+                <textarea style="width: 100%;" class="form-control" rows="3" id="textArea"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<center>
+    <a class="btn btn-primary">Create</a>
+</center>

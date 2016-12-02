@@ -1,0 +1,170 @@
+﻿
+@{
+    ViewBag.Title = "Import";
+}
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+
+        <!-- Import Panel -->
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Import Assay Test Reqults from Lab Equipment</h3>
+            </div>
+            <div class="panel-body">
+
+                <!-- Standar Form -->
+                <h4>Import results from equipment</h4>
+                    <div class="form-inline">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <select class="form-control" id="select-equipment">
+                                    <option> -- Select Test Equipment -- </option>
+                                    <option>Equipment 1</option>
+                                    <option>Equipment 2</option>
+                                    <option>Equipment 3</option>
+                                    <option>Equipment 4</option>
+                                    <option>Equipment 5</option>
+                                    <option>Equipment 6</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2 col-md-offset-0">
+                                <button class="btn btn-sm btn-primary" onclick="move()">Import</button>
+                            </div>
+                        </div>
+                    </div>
+                <hr />
+                <h4>Select files from your computer</h4>
+                <form action="" method="post" enctype="multipart/form-data" id="js-upload-form">
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <input type="file" name="files[]" id="js-upload-files" multiple>
+                        </div>
+                        <button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">Upload files</button>
+                    </div>
+                </form>
+                <hr />
+                <!-- Drop Zone -->
+                <h4>Drag and drop files below</h4>
+                <div class="upload-drop-zone" id="drop-zone">
+                    Drag test results to this location
+                </div>
+                <!-- Progress Bar -->
+                <div id="myProgress">
+                    <div id="myBar"></div>
+                </div>
+                <!-- Upload Finished -->
+                <div class="js-upload-finished">
+                    <h3>Processed files</h3>
+                    <p id="nofiles">none</p>
+                    <div class="list-group" style="display: none" id="result">
+                        <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>report_quanatative.txt</a>
+                        <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>report_qualatative.txt</a>
+                        <hr />
+                        <a class="btn btn-primary" href="/StaffPortal/Testing/Import">Import New</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    #myProgress {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background-color: #F5F5F5;
+}
+#myBar {
+    position: absolute;
+    width: 1%;
+    height: 100%;
+    background-color: #337AB7;
+}
+
+    /* layout.css Style */
+    .upload-drop-zone {
+        height: 200px;
+        border-width: 2px;
+        margin-bottom: 20px;
+    }
+
+    /* skin.css Style*/
+    .upload-drop-zone {
+        color: #ccc;
+        border-style: dashed;
+        border-color: #ccc;
+        line-height: 200px;
+        text-align: center;
+    }
+
+        .upload-drop-zone.drop {
+            color: #222;
+            border-color: #222;
+        }
+</style>
+
+<script>
+    $(document).ready(function () {
+        + function ($) {
+            'use strict';
+
+            // UPLOAD CLASS DEFINITION
+            // ======================
+
+            var dropZone = document.getElementById('drop-zone');
+            var uploadForm = document.getElementById('js-upload-form');
+
+            var startUpload = function (files) {
+                console.log(files)
+            }
+
+            uploadForm.addEventListener('submit', function (e) {
+                var uploadFiles = document.getElementById('js-upload-files').files;
+                e.preventDefault()
+
+                startUpload(uploadFiles)
+            })
+
+            dropZone.ondrop = function (e) {
+                e.preventDefault();
+                this.className = 'upload-drop-zone';
+
+                startUpload(e.dataTransfer.files)
+            }
+
+            dropZone.ondragover = function () {
+                this.className = 'upload-drop-zone drop';
+                return false;
+            }
+
+            dropZone.ondragleave = function () {
+                this.className = 'upload-drop-zone';
+                return false;
+            }
+
+        }(jQuery);
+
+
+    })
+
+    function move() {
+        var elem = document.getElementById("myBar");
+        var width = 1;
+        var id = setInterval(frame, 10);
+        function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+            } else {
+                width++;
+                elem.style.width = width + '%';
+            }
+        }
+
+        setTimeout(function () {
+            $("#nofiles").remove();
+            $("#result").show();
+        }, 1050)
+    }
+</script>

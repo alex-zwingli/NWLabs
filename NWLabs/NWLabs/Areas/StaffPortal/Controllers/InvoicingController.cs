@@ -6,25 +6,30 @@ using System.Web.Mvc;
 
 namespace NWLabs.Areas.StaffPortal.Controllers
 {
-    public class ReportsController : Controller
+    public class InvoicingController : Controller
     {
-        // GET: StaffPortal/Reports
+        // GET: StaffPortal/Invoicing
         public ActionResult Index()
         {
-            return View(); // Coming Soon
+            return View();
         }
 
-        public ActionResult Data()
+        public ActionResult All()
         {
             return View();
         }
 
-        public ActionResult Summary()
+        public ActionResult Pending()
         {
             return View();
         }
 
-        public ActionResult AddSummary()
+        public ActionResult Outstanding()
+        {
+            return View();
+        }
+
+        public ActionResult Billing()
         {
             return View();
         }
