@@ -48,5 +48,20 @@ namespace NWLabs.Areas.StaffPortal.Controllers
         {
             return View();
         }
+
+        public ActionResult TestSchedule()
+        {
+            return View(); //Comming Soon
+        }
+
+        public ActionResult ReadyCompounds()
+        {
+            return View();
+        }
+
+        public ActionResult Solubilize()
+        {
+            return View();
+        }
     }
 }

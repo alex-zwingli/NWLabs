@@ -1,0 +1,164 @@
+﻿
+@{
+    ViewBag.Title = "Solubilize";
+}
+
+<center><h2>Solubilize</h2></center>
+
+<div class="row">
+    <div class="col-sm-3 col-sm-offset-2">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Compund Details</h3>
+            </div>
+            <div class="panel-body">
+                <strong>Organization Name</strong>
+                <p>Researcher Scientific<br /></p>
+                <strong>Compound Name</strong>
+                <p>Researcher Scientific<br /></p>
+                <strong>LT Number</strong>
+                <p>014257<br /></p>
+                <strong>Test ID</strong>
+                <p>3265<br /></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-5">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Scheduled Testing</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Assay Test</th>
+                            <th><center>Quantity</center></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ImmunoScreen® (IS)</td>
+                            <td><center>2</center></td>
+                        </tr>
+                        <tr>
+                            <td>Biochemical Pharmacology (BP)</td>
+                            <td><center>1</center></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <center><button class="btn btn-info" onclick="scan()">Print Test Tube Labels</button></center>
+    </div>
+</div>
+
+<!-- Print Modal -->
+<div class="modal fade" id="scan" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title" style="text-align: center">Scanning Label</h3>
+            </div>
+            <div class="modal-body">
+                <div class="row" style="text-align: center;">
+                    <div class="col-sm-4">
+                        <h3>Calculating Values<br /></h3>
+                    </div>
+                    <div class="col-sm-4">
+                        <h3>Generating Labels<br /></h3>
+                    </div>
+                    <div class="col-sm-4">
+                        <h3>Printing Labels<br /></h3>
+                    </div>
+                </div>
+                <div class="row" style="text-align: center;">
+                    <div class="col-sm-4">
+                        <div id="1_box">
+                            <i class="fa fa-square-o fa-3x" aria-hidden="true"></i>
+                        </div>
+                        <div id="1_wheel" style="display: none;">
+                            <i class="fa fa-refresh fa-spin fa-3x fa-fw margin-bottom"></i>
+                        </div>
+                        <div id="1_check" style="display: none;">
+                            <i class="fa fa-check-square-o fa-3x" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div id="2_box">
+                            <i class="fa fa-square-o fa-3x" aria-hidden="true"></i>
+                        </div>
+                        <div id="2_wheel" style="display: none;">
+                            <i class="fa fa-refresh fa-spin fa-3x fa-fw margin-bottom"></i>
+                        </div>
+                        <div id="2_check" style="display: none;">
+                            <i class="fa fa-check-square-o fa-3x" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div id="3_box">
+                            <i class="fa fa-square-o fa-3x" aria-hidden="true"></i>
+                        </div>
+                        <div id="3_wheel" style="display: none;">
+                            <i class="fa fa-refresh fa-spin fa-3x fa-fw margin-bottom"></i>
+                        </div>
+                        <div id="3_check" style="display: none;">
+                            <i class="fa fa-check-square-o fa-3x" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function scan() {
+
+        $("#scan").modal("show");
+        $("#scan").modal
+
+        setTimeout(function () {
+            $("div#1_box").remove();
+            $("div#1_wheel").show();
+        }, 1000);
+
+        setTimeout(function () {
+            $("div#1_wheel").remove();
+            $("div#1_check").show();
+        }, 3000);
+
+        setTimeout(function () {
+            $("div#2_box").remove();
+            $("div#2_wheel").show();
+        }, 3500);
+
+        setTimeout(function () {
+            $("div#2_wheel").remove();
+            $("div#2_check").show();
+        }, 5500);
+
+        setTimeout(function () {
+            $("div#3_box").remove();
+            $("div#3_wheel").show();
+        }, 6000);
+
+        setTimeout(function () {
+            $("div#3_wheel").remove();
+            $("div#3_check").show();
+        }, 7000);
+
+        setTimeout(function () {
+            $("#scan").modal("hide");
+            document.getElementById("customer_ContactName").value = "Chris Bacon";
+            document.getElementById("customer_OrganizationName").value = "PharmTech, Inc.";
+            document.getElementById("customer_CustEmail").value = "chris.p.bacon@pharmtech.com";
+            document.getElementById("compound_LTNumber").value = "014567";
+            document.getElementById("compound_compountName").value = "clay";
+            document.getElementById("compound_ReceivedBy").value = "Kelly Vaughn";
+            $("#button").remove();
+            $("#scan_alert").show();
+        }, 8000)
+    }
+</script>

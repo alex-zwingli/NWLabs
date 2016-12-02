@@ -15,6 +15,11 @@ namespace NWLabs.Areas.StaffPortal.Controllers
             return View(); // Coming Soon
         }
 
+        public ActionResult Logs()
+        {
+            return View();
+        }
+
         // Enter new compound information
         public ActionResult New()
         {

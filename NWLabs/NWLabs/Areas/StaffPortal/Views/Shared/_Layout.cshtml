@@ -101,9 +101,10 @@
                 <li class="dropdown @ViewBag.statusTesting">
                     <a class="dropdown-toggle @ViewBag.statusTesting" href="/StaffPortal/Testing">Testing</a>
                     <ul class="dropdown-menu">
-                        <li>@Html.ActionLink("Scheduling", "Schedule", "Testing")</li>
-                        <li>@Html.ActionLink("Compound Testing", "TestCompound", "Testing")</li>
+                        <li>@Html.ActionLink("Assay Schedule", "TestSchedule", "Testing")</li>
+                        <li>@Html.ActionLink("Schedule Assays", "TestCompound", "Testing")</li>
                         <li>@Html.ActionLink("Import Results", "Import", "Testing")</li>
+                        <li>@Html.ActionLink("Solubilize", "ReadyCompounds", "Testing")</li>
                     </ul>
                 </li>
                 <li class="dropdown @ViewBag.statusReceiving">

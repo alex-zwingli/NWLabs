@@ -72,7 +72,7 @@
                                         </div>
                                         <div class="form-group">
                                             @Html.LabelFor(model => model.compound.DateReceived, htmlAttributes: new { @class = "control-label" })
-                                            @Html.EditorFor(model => model.compound.DateReceived, new { htmlAttributes = new { @class = "form-control hasDatepicker" } })
+                                            @Html.EditorFor(model => model.compound.DateReceived, new { htmlAttributes = new { @class = "form-control hasDatepicker", type="Date"} })
                                             @Html.ValidationMessageFor(model => model.compound.DateReceived, "", new { @class = "text-danger" })
                                         </div>
                                         <div class="form-group">
@@ -82,7 +82,7 @@
                                         </div>
                                         <div class="form-group">
                                             @Html.LabelFor(model => model.compound.ScheduleDate, htmlAttributes: new { @class = "control-label" })
-                                            @Html.EditorFor(model => model.compound.ScheduleDate, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.EditorFor(model => model.compound.ScheduleDate, new { htmlAttributes = new { @class = "form-control", type="Date" } })
                                             @Html.ValidationMessageFor(model => model.compound.ScheduleDate, "", new { @class = "text-danger" })
                                         </div>
                                         <div class="form-group">
@@ -94,6 +94,14 @@
                                             @Html.LabelFor(model => model.compound.MTD, htmlAttributes: new { @class = "control-label" })
                                             @Html.EditorFor(model => model.compound.MTD, new { htmlAttributes = new { @class = "form-control" } })
                                             @Html.ValidationMessageFor(model => model.compound.MTD, "", new { @class = "text-danger" })
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Animal</label>
+                                            <select class="form-control" id="select">
+                                                <option> -- Select One -- </option>
+                                                <option>true</option>
+                                                <option>false</option>
+                                            </select>
                                         </div>
                                         <button type="button" class="btn btn-info" id="button" onclick="print()">Record</button>
 
@@ -110,8 +118,8 @@
 }
 
 <!-- Scan Modal -->
-<div class="modal fade" id="scan" role="dialog">
-    <div class="modal-dialog modal-sm">
+<div class="modal fade" id="scan" role="dialog" >
+    <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -196,6 +204,10 @@
 
 <script>
 
+    $(document).ready(function () {
+
+    })
+
     function scan() {
 
         $("#scan").modal("show");
@@ -236,6 +248,9 @@
             document.getElementById("customer_ContactName").value = "Chris Bacon";
             document.getElementById("customer_OrganizationName").value = "PharmTech, Inc.";
             document.getElementById("customer_CustEmail").value = "chris.p.bacon@pharmtech.com";
+            document.getElementById("compound_LTNumber").value = "014567";
+            document.getElementById("compound_compountName").value = "clay";
+            document.getElementById("compound_ReceivedBy").value = "Kelly Vaughn";
             $("#button").remove();
             $("#scan_alert").show();
         }, 8000)
@@ -252,7 +267,7 @@
 
         setTimeout(function() {
             $("#print").modal("hide");
-            window.location = "http://localhost:42450/StaffPortal/Receiving"
+            window.location = "http://localhost:42450/StaffPortal/Receiving/Index"
         }, 7000)
     }
 </script>

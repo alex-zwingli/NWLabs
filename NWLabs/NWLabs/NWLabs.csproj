@@ -371,6 +371,10 @@
     <Content Include="Areas\StaffPortal\Views\Reports\AddSummary.cshtml" />
     <Content Include="Areas\StaffPortal\Views\Testing\Preview.cshtml" />
     <Content Include="Areas\StaffPortal\Views\Testing\Schedule.cshtml" />
+    <Content Include="Areas\StaffPortal\Views\Receiving\Logs.cshtml" />
+    <Content Include="Areas\StaffPortal\Views\Testing\TestSchedule.cshtml" />
+    <Content Include="Areas\StaffPortal\Views\Testing\ReadyCompounds.cshtml" />
+    <Content Include="Areas\StaffPortal\Views\Testing\Solubilize.cshtml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
