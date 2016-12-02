@@ -19,6 +19,11 @@ namespace NWLabs.Areas.StaffPortal.Controllers
             return View();
         }
 
+        public ActionResult Unscheduled()
+        {
+            return View();
+        }
+
         public ActionResult TestTubes()
         {
             return View();

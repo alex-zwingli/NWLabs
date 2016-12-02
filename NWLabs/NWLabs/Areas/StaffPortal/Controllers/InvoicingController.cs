@@ -33,5 +33,10 @@ namespace NWLabs.Areas.StaffPortal.Controllers
         {
             return View();
         }
+
+        public ActionResult Paid()
+        {
+            return View();
+        }
     }
 }

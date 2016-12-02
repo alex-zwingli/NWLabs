@@ -237,6 +237,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ConnectionString.txt" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -298,6 +299,7 @@
     <Content Include="Content\themes\base\tabs.css" />
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="Content\Thumbnails.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -371,11 +373,19 @@
     <Content Include="Areas\StaffPortal\Views\Reports\AddSummary.cshtml" />
     <Content Include="Areas\StaffPortal\Views\Testing\Preview.cshtml" />
     <Content Include="Areas\StaffPortal\Views\Testing\Schedule.cshtml" />
-    <Content Include="Areas\StaffPortal\Views\Receiving\Logs.cshtml" />
+    <Content Include="Areas\StaffPortal\Views\Receiving\Log.cshtml" />
     <Content Include="Areas\StaffPortal\Views\Testing\TestSchedule.cshtml" />
     <Content Include="Areas\StaffPortal\Views\Testing\ReadyCompounds.cshtml" />
     <Content Include="Areas\StaffPortal\Views\Testing\Solubilize.cshtml" />
+    <Content Include="Areas\StaffPortal\Views\Catalog\List.cshtml" />
+    <Content Include="Areas\StaffPortal\Views\Catalog\Add.cshtml" />
+    <Content Include="Areas\StaffPortal\Views\Catalog\Publish.cshtml" />
+    <Content Include="Areas\StaffPortal\Views\Catalog\Details.cshtml" />
+    <Content Include="Areas\StaffPortal\Views\Testing\Unscheduled.cshtml" />
+    <Content Include="Areas\StaffPortal\Views\Invoicing\Paid.cshtml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="ReadMe.txt" />
+    <Content Include="Schema.sql" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />

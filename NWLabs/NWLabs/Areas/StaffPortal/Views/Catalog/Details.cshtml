@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+}
+
+<center><h2>Catalog Item Details</h2></center>
+
+<div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+        <form>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 style="margin: 0px;"><input type="text" class="form-control" value="ImmunoScreen® (IS)" /></h3>
+                </div>
+                <div class="panel-body">
+                    <legend>
+                        Needed Tests
+                    </legend>
+                    <textarea class="form-control" rows="4" id="textArea" style="width: 500px;">
+- Maecenas quis felis maximus, bibendum dolor in, vestibulum dui.
+- Vivamus sed lorem facilisis, imperdiet leo at, sagittis lorem.
+- Mauris auctor libero eget lacus convallis lacinia.</textarea>
+                    <p><br></p>
+
+                    <legend>
+                        Length of Test
+                    </legend>
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <p>
+                                <strong>Days:</strong>
+                            </p>
+                        </div>
+                        <div class="col-sm-2">
+                            <input class="form-control" type="number" value="0"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <p>
+                                <strong>Hours:</strong>
+                            </p>
+                        </div>
+                        <div class="col-sm-2">
+                            <input class="form-control" type="number" value="9"/>
+                        </div>
+                    </div>
+                    <p><br></p>
+
+                    <legend>
+                        Protocol
+                    </legend>
+                    <textarea class="form-control" rows="4" id="textArea" style="width: 500px;">
+1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+2. Sed quis augue ac lorem varius venenatis ut sit amet lacus.
+
+1. Nullam in tortor ullamcorper orci sollicitudin ornare vel sed nisl.
+2. Aliquam rhoncus lectus sed tellus viverra faucibus.
+3. Cras tristique risus vel ullamcorper ornare.
+4. Vivamus malesuada erat ac ligula iaculis rutrum.
+
+1. Aenean mattis sem vitae suscipit malesuada.
+
+1. Maecenas quis felis maximus, bibendum dolor in, vestibulum dui.
+2. Vivamus sed lorem facilisis, imperdiet leo at, sagittis lorem.
+3. Mauris auctor libero eget lacus convallis lacinia.
+4. Nam nec odio et velit bibendum ullamcorper non et ipsum.
+5. Aenean ac ligula eu nibh viverra convallis sit amet et turpis.
+
+1. Proin cursus eros ut mauris lobortis, pulvinar accumsan quam condimentum.
+2. Sed aliquam lorem at ipsum tristique semper.
+3. Quisque sed arcu dapibus, blandit ante fermentum, posuere ante.
+4. Praesent eu mauris non purus dignissim ultricies.
+                    </textarea>
+                    <p><br></p>
+
+                    <legend>
+                        Materials
+                    </legend>
+                    <textarea class="form-control" rows="4" id="textArea" style="width: 500px;">
+- Maecenas quis felis maximus, bibendum dolor in, vestibulum dui.
+- Vivamus sed lorem facilisis, imperdiet leo at, sagittis lorem.
+- Mauris auctor libero eget lacus convallis lacinia.
+- Nam nec odio et velit bibendum ullamcorper non et ipsum.
+- Aenean ac ligula eu nibh viverra convallis sit amet et turpis.
+                    </textarea>
+                    <hr />
+                    <center>@Html.ActionLink("back to list", "List", "Catalog") | @Html.ActionLink("Save", "List", "Catalog", null, new { @class = "btn btn-primary" })</center>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

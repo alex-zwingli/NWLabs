@@ -1,0 +1,6 @@
+﻿
+Connection String for Northwest Labs Database
+
+-----
+	Data Source=DESKTOP-4RG0ECR\SQLEXPRESS;Initial Catalog=NorthwestLabsDatabase;Integrated Security=True
+-----

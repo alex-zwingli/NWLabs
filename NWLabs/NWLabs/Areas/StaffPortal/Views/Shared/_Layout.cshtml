@@ -102,7 +102,7 @@
                     <a class="dropdown-toggle @ViewBag.statusTesting" href="/StaffPortal/Testing">Testing</a>
                     <ul class="dropdown-menu">
                         <li>@Html.ActionLink("Assay Schedule", "TestSchedule", "Testing")</li>
-                        <li>@Html.ActionLink("Schedule Assays", "TestCompound", "Testing")</li>
+                        <li>@Html.ActionLink("Schedule Assays", "Unscheduled", "Testing")</li>
                         <li>@Html.ActionLink("Import Results", "Import", "Testing")</li>
                         <li>@Html.ActionLink("Solubilize", "ReadyCompounds", "Testing")</li>
                     </ul>
@@ -115,11 +115,8 @@
                         @*<li>@Html.ActionLink("", "", "")</li>*@
                     </ul>
                 </li>
-                <li class="dropdown @ViewBag.statusQuotes ">
+                <li class="@ViewBag.statusQuotes">
                     <a class="dropdown-toggle @ViewBag.statusQuotes" href="/StaffPortal/Quotes">Quotes</a>
-                    <ul class="dropdown-menu">
-                        @*<li>@Html.ActionLink("", "", "")</li>*@
-                    </ul>
                 </li>
                 <li class="dropdown @ViewBag.statusInvoicing">
                     <a class="dropdown-toggle" href="/StaffPortal/Invoicing">Invoicing</a>
@@ -138,22 +135,20 @@
                         <li>@Html.ActionLink("Completed", "Completed", "WorkOrders")</li>
                     </ul>
                 </li>
-                <li class="dropdown @ViewBag.statusClients">
+                <li class="@ViewBag.statusClients">
                     <a class="dropdown-toggle @ViewBag.statusClients" href="/StaffPortal/Clients">Clients</a>
-                    <ul class="dropdown-menu">
-                        @*<li>@Html.ActionLink("", "", "")</li>*@
-                    </ul>
                 </li>
                 <li class="dropdown @ViewBag.statusCatalog">
                     <a class="dropdown-toggle @ViewBag.statusCatalog" href="/StaffPortal/Catalog">Catalog</a>
                     <ul class="dropdown-menu">
-                        @*<li>@Html.ActionLink("", "", "")</li>*@
+                        <li>@Html.ActionLink("Assay List", "List", "Catalog")</li>
+                        <li>@Html.ActionLink("Add Assay", "Add", "Catalog")</li>
+                        <li>@Html.ActionLink("Publisher", "Publish", "Catalog")</li>
                     </ul>
                 </li>
-                <li class="dropdown @ViewBag.statusTickets">
+                <li class="@ViewBag.statusTickets">
                     <a class="dropdown-toggle @ViewBag.statusTickets" href="/StaffPortal/Tickets">Tickets</a>
                     <ul class="dropdown-menu">
-                        @*<li>@Html.ActionLink("", "", "")</li>*@
                     </ul>
                 </li>
                 <li class="dropdown @ViewBag.statusReports">

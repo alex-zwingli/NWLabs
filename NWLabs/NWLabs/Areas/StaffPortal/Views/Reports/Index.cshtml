@@ -3,6 +3,36 @@
     ViewBag.Title = "Reports - Index";
 }
 
-<h2>@ViewBag.Title</h2>
+<div class="row">
+    <div class="col-sm-4 col-sm-offset-2">
+        <div class="thumbnail">
+            <center>
+                <h1>Data <br />Report</h1>
+                <a href="/StaffPortal/Receiving/Log"><i class="fa fa-bar-chart fa-5x icon" aria-hidden="true"></i></a>
+            </center>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="thumbnail">
+            <center>
+                <h1>Summary Report</h1>
+                <a href="/StaffPortal/Receiving/New"><i class="fa fa-pie-chart fa-5x icon" aria-hidden="true"></i></a>
+            </center>
+        </div>
+    </div>
+</div>
 
-@Html.Partial("_ComingSoon")
+<style>
+    .icon {
+        font-size: 10em;
+        padding: 50px 0px 30px;
+    }
+
+    h1 {
+        margin: 30px 50px 20px;
+    }
+
+    .content {
+        margin: 80px 0px;
+    }
+</style>
