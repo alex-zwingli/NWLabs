@@ -3,7 +3,82 @@
     ViewBag.Title = "Schedule";
 }
 
-<center>Schedule</center>
+<center><h2>Coordinated Scheduling</h2></center>
 
-
-
+<div class="row">
+    <div class="col-sm-3 col-sm-offset-1">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Schedule Test</h3>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="usr">Date:</label>
+                    <input type="date" class="form-control" id="usr">
+                </div>
+                <div class="form-group">
+                    <label for="usr">Time:</label>
+                    <input type="time" class="form-control" id="usr">
+                </div>
+            </div>
+        </div>
+        <center><a class="btn btn-primary" href="#">Schedule</a></center>
+    </div>
+    <div class="col-sm-7">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Similar Tests</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped table-hover ">
+                    <thead>
+                        <tr>
+                            <th>Work Order</th>
+                            <th>Test</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="1">
+                            <td><a href="#">3455</a></td>
+                            <td>ImmunoScreen® (IS)</td>
+                            <td>2016-12-02</td>
+                            <td>08:00 AM</td>
+                        </tr>
+                        <tr id="2">
+                            <td><a href="#">3457</a></td>
+                            <td>ImmunoScreen® (IS)</td>
+                            <td>2016-12-04</td>
+                            <td>08:00 AM</td>
+                        </tr>
+                        <tr id="3">
+                            <td><a href="#">3464</a></td>
+                            <td>ImmunoScreen® (IS)</td>
+                            <td>2016-12-04</td>
+                            <td>12:00 PM
+                        </tr>
+                        <tr id="4">
+                            <td><a href="#">3468</a></td>
+                            <td>ImmunoScreen® (IS)</td>
+                            <td>2016-12-05</td>
+                            <td>10:00 AM</center></td>
+                        </tr>
+                        <tr id="5">
+                            <td><a href="#">3468</a></td>
+                            <td>Biochemical Pharmacology (BP)</td>
+                            <td>2016-12-05</td>
+                            <td>04:00 PM</td>
+                        </tr>
+                        <tr id="6">
+                            <td><a href="#">3470</a></td>
+                            <td>Biochemical Pharmacology (BP)</td>
+                            <td>2016-12-06</td>
+                            <td>04:00 PM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
