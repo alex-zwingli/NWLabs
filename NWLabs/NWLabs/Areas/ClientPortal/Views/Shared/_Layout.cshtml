@@ -96,34 +96,36 @@
                 <li class="dropdown @ViewBag.statusOrders">
                     <a class="dropdown-toggle" href="/ClientPortal/Orders/Index">Orders</a>
                     <ul class="dropdown-menu">
-                        <li>@Html.ActionLink("Order Details", "OrderDetails", "Orders")</li>
-                        <li>@Html.ActionLink("Submissions", "Submissions", "Orders")</li>
-                        <li>@Html.ActionLink("Testing & Results", "Testing", "Orders")</li>
-                        <li>@Html.ActionLink("Permissions", "Permissions", "Orders")</li>
+                        <li><a href="#">Order Details</a></li>
+                        <li><a href="#">Submissions</a></li>
+                        <li><a href="#">Testing & Results</a></li>
+                        <li><a href="#">Permissions</a></li>
+
                     </ul>
                 </li>
                 <li role="presentation" class="@ViewBag.statusReports">@Html.ActionLink("Reports", "Index", "Reports")</li>
                 <li class="dropdown @ViewBag.statusBilling">
                     <a class="dropdown-toggle" href="/ClientPortal/Billing/Index">Billing</a>
                     <ul class="dropdown-menu">
-                        <li>@Html.ActionLink("Invoices", "Invoices", "Billing")</li>
-                        <li>@Html.ActionLink("Payments", "Payments", "Billing")</li>
-                        <li>@Html.ActionLink("Payment Information", "Payment", "AccountProfile")</li>
+                        <li><a href="#">Invoices</a></li>
+                        <li><a href="#">Payments</a></li>
+                        <li><a href="#">Payment Information</a></li>
                     </ul>
                 </li>
                 <li class="dropdown @ViewBag.statusTickets">
                     <a class="dropdown-toggle" href="/ClientPortal/Tickets/Index">Tickets</a>
                     <ul class="dropdown-menu">
-                        <li>@Html.ActionLink("Submissions", "Tickets", "Tickets")</li>
-                        <li>@Html.ActionLink("New Ticket", "New", "Tickets")</li>
+                        <li><a href="#">Submissions</a></li>
+
+                        <li><a href="#"></a>New Ticket</li>
                     </ul>
                 </li>
                 <li class="dropdown @ViewBag.statusQuotes">
                     <a class="dropdown-toggle" href="/ClientPortal/Quotes/Index">Quotes</a>
                     <ul class="dropdown-menu">
-                        <li>@Html.ActionLink("Request Quote", "Request", "Quotes")</li>
-                        <li>@Html.ActionLink("Pending Quotes", "Pending", "Quotes")</li>
-                        <li>@Html.ActionLink("Quotes", "Quotes", "Quotes")</li>
+                        <li><a href="#"></a>Request Quote</li>
+                        <li><a href="#">Pending Quotes</a></li>
+                        <li><a href="#">Quotes</a></li>
                     </ul>
                 </li>
                 <li role="presentation" class="@ViewBag.statusAccountProfile">@Html.ActionLink("Profile", "Index", "AccountProfile")</li>
