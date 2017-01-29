@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="content">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="thumbnail">
+                <center>
+                    <h1>All</h1>
+                    <a href="/StaffPortal/Invoicing/All"><i class="fa fa-file-text-o fa-5x icon" aria-hidden="true"></i></a>
+                </center>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="thumbnail">
+                <center>
+                    <h1>Pending</h1>
+                    <a href="/StaffPortal/Invoicing/Pending"><i class="fa fa-hourglass-o fa-5x icon" aria-hidden="true"></i></a>
+                </center>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="thumbnail">
+                <center>
+                    <h1>Outstanding</h1>
+                    <a href="/StaffPortal/Invoicing/Outstanding"><i class="fa fa-clock-o fa-5x icon" aria-hidden="true"></i></a>
+                </center>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="thumbnail">
+                <center>
+                    <h1>Paid</h1>
+                    <a href="/StaffPortal/Invoicing/Paid"><i class="fa fa-usd fa-5x icon" aria-hidden="true"></i></a>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .icon {
+        font-size: 10em;
+        padding: 50px 0px 30px;
+    }
+
+    h1 {
+        margin: 30px 50px 20px;
+    }
+
+    .content {
+        margin: 80px 0px;
+    }
+</style>

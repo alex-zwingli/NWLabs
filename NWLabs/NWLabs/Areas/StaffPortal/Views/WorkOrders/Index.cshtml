@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Word Orders - Index";
+}
+
+<div class="content">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <center>
+                    <h1>Pending Orders</h1>
+                    <a href="/StaffPortal/WorkOrders/Pending"><i class="fa fa-hourglass-o fa-5x icon" aria-hidden="true"></i></a>
+                </center>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <center>
+                    <h1>Approved Orders</h1>
+                    <a href="/StaffPortal/WorkOrders/Approved"><i class="fa fa-calendar-minus-o fa-5x icon" aria-hidden="true"></i></a>
+                </center>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <center>
+                    <h1>Completed Orders</h1>
+                    <a href="/StaffPortal/WorkOrders/Completed"><i class="fa fa-check-square-o fa-5x icon" aria-hidden="true"></i></a>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .icon {
+        font-size: 10em;
+        padding: 50px 0px 30px;
+    }
+
+    h1 {
+        margin: 30px 50px 20px;
+    }
+
+    .content {
+        margin: 80px 0px;
+    }
+</style>

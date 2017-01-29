@@ -22,6 +22,11 @@ namespace NWLabs.Controllers
         {
         }
 
+        public ActionResult StaffLogin()
+        {
+            return View();
+        }
+
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
         {
             UserManager = userManager;

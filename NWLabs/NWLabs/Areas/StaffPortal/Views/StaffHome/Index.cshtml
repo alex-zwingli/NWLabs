@@ -1,0 +1,180 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<main>
+    <link href="~/Content/landing_page.css" rel="stylesheet" />
+</main>
+
+<div class="container">
+    <div class="col-md-8 col-md-push-4">
+        <div class="row" style="margin-right: 20px;">
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <center>
+                        <h1>Testing</h1>
+                        <a href="/StaffPortal/Testing/Index"><i class="fa fa-flask fa-5x icon" aria-hidden="true"></i></a>
+                    </center>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <center>
+                        <h1>Receiving</h1>
+                        <a href="/StaffPortal/Receiving/Index"><i class="fa fa-truck fa-5x icon" aria-hidden="true"></i></a>
+                    </center>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <center>
+                        <h1>Quotes</h1>
+                        <a href="/StaffPortal/Quotes/Index"><i class="fa fa-money fa-5x icon" aria-hidden="true"></i></a>
+                    </center>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <center>
+                        <h1>Orders</h1>
+                        <a href="/StaffPortal/Orders/Index"><i class="fa fa-wrench fa-5x icon" aria-hidden="true"></i></a>
+                    </center>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <center>
+                        <h1>Clients</h1>
+                        <a href="/StaffPortal/Clients/Index"><i class="fa fa-users fa-5x icon" aria-hidden="true"></i></a>
+                    </center>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <center>
+                        <h1>Catalog</h1>
+                        <a href="/StaffPortal/Catalog/Index"><i class="fa fa-file-text-o fa-5x icon" aria-hidden="true"></i></a>
+                    </center>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <center>
+                        <h1>Tickets</h1>
+                        <a href="/StaffPortal/Tickets/Index"><i class="fa fa-ticket fa-5x icon" aria-hidden="true"></i></a>
+                    </center>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <center>
+                        <h1>Reports</h1>
+                        <a href="/StaffPortal/Reports/Index"><i class="fa fa-bar-chart-o fa-5x icon" aria-hidden="true"></i></a>
+                    </center>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <center>
+                        <h1>Support</h1>
+                        <a href="#"><i class="fa fa-bug fa-5x icon" aria-hidden="true"></i></a>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="hidden-lg hidden-md visible-sm visible-xs" />
+    <div class="col-md-4 col-md-pull-8 side-bar">
+        <div class="row visible-lg visible-md hidden-xs pull-left"></div>
+        <!-- Panel for side bar -->
+<!-- Quote Panel -->
+        <center>
+            <div class="panel panel-primary pull-left">
+                <div class="panel-heading">
+                    <div class="panel-title">@ViewBag.author</div>
+                </div>
+                <div class="panel-body">
+                    @ViewBag.quote
+                </div>
+            </div>
+        </center>
+<!-- /Quote Panel -->
+
+        <div class="clearfix hidden-lg hidden-md visible-sm visible-xs"></div>
+        <center>
+            <div class="panel panel-primary pull-left">
+                <div class="panel-heading">
+                    <div class="panel-title">Company Calendar</div>
+                </div>
+                <div class="panel-body">
+                    <iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=r11u4k6p6o3q355sk11v6nrujc%40group.calendar.google.com&amp;color=%23333333&amp;ctz=America%2FDenver" style="border-width:0" width="auto" height="600" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </div>
+        </center>
+    </div>
+</div>
+<hr />
+<div class="container">
+    <!-- News Items -->
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="panel-title">Company News</div>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="thumbnail thumbnailadd col-md-3 col-sm-6">
+                    <img src="https://marriottschool.byu.edu/upload/news/images/1169-finals_thumbnail_reel.jpg" alt="bell tower link" />
+                    <div class="content">
+                        <p><b>Recruiting Efforts Start at BYU</b></p>
+                        <p>Recognizing Brigham Young University for its academic excellence, Northwest Labs has taken a renewed effort to recruit more students for permanent positions and internships.</p>
+                        <a href="#" class="btn btn-default btn-sm">Read more</a>
+                    </div>
+                </div>
+                <hr class="hidden-sm visible-xs" />
+                <div class="thumbnail thumbnailadd col-md-3 col-sm-6">
+                    <img src="https://marriottschool.byu.edu/upload/news/images/1167-lee-perry-feature-crop1_reel.jpg" alt="dean portrait link" />
+                    <div class="content">
+                        <p><b>A Tribute to our CEO</b></p>
+                        <p>Celebrating 14 Years of wise leadership, Peter Christopherson celebrates by throwing a company party and awarding more bonuses this year.</p>
+                        <a href="#" class="btn btn-default btn-sm">Read more</a>
+                    </div>
+                </div>
+                <hr class="hidden-sm visible-xs" />
+                <div class="thumbnail thumbnailadd col-md-3 col-sm-6">
+                    <img src="https://marriottschool.byu.edu/upload/news/images/1164-is_professors_reel.jpeg" alt="dream team link" />
+                    <div class="content">
+                        <p><b>Why We Disregard Security Warnings</b></p>
+                        <p>Software developers listen up: if you want people to pay attention to your security warnings on their computers or mobile devices, you need to make them pop up at better times.</p>
+                        <a href="#" class="btn btn-default btn-sm">Read more</a>
+                    </div>
+                </div>
+                <hr class="hidden-sm visible-xs" />
+                <div class="thumbnail thumbnailadd col-md-3 col-sm-6">
+                    <img class="conform" src="https://marriottschool.byu.edu/upload/news/images/1160-istock_000023721739large_article.jpg" alt="touch link" />
+                    <div class="content">
+                        <p><b>Northwest Labs Upgrades Tech</b></p>
+                        <p>In cooperation with Integrated Solutions, Northwest Labs is updating their systems to improve fluidity, effeciency, and accuracy as they continue to provide excellent customer service and testing.</p>
+                        <a href="#" class="btn btn-default btn-sm">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 'Need Help?' Section -->
+<div class="container section">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+            <hr class="bar" />
+            <div class="clearfix"></div>
+            <h2>New Employee Training</h2>
+            <p>Attend the upcomming training sessions to ensure a bright, accomplished future in this company. The future starts now.</p>
+            <p>@Html.ActionLink("Contact", "Contact", "Home", new { @class = "btn btn-default" } )</a></p>
+        </div>
+        <div class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+            <img class="img-responsive img-thumbnail" src="http://buprecon.com/wp-content/uploads/2014/08/handshake_forward-e1409233425624.jpg" alt="handshake_forward" />
+        </div>
+    </div>
+</div>
+<!-- /'Need Help?' Section-->

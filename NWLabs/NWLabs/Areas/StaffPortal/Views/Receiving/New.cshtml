@@ -1,0 +1,301 @@
+﻿@model NWLabs.Areas.StaffPortal.Models.CustomerCompound
+
+@{
+    ViewBag.Title = "New";
+}
+
+<!-- Form for receipt of new compound. -->
+
+<main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</main>
+
+
+@using (Html.BeginForm())
+{
+    <div class="container">
+        <div class="row">
+            <p></p>
+        </div>
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h1 class="panel-title" style="align-content: center;">Compount Receipt Log</h1>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-5 col-sm-offset-1">
+                                        <h3>Customer</h3>
+                                        <hr />
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.customer.ContactName, htmlAttributes: new { @class = "control-label" })
+                                            @Html.EditorFor(model => model.customer.ContactName, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.customer.ContactName, "", new { @class = "text-danger" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.customer.OrganizationName, htmlAttributes: new { @class = "control-label" })
+                                            @Html.EditorFor(model => model.customer.OrganizationName, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.customer.OrganizationName, "", new { @class = "text-danger" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.customer.CustEmail, htmlAttributes: new { @class = "control-label" })
+                                            @Html.EditorFor(model => model.customer.CustEmail, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.customer.CustEmail, "", new { @class = "text-danger" })
+                                        </div>
+                                        <button type="button" class="btn btn-info" id="button" onclick="scan()">Scan Label</button>
+                                        <div class="alert alert-dismissible alert-success" id="scan_alert" style="display: none;">
+                                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                            <strong>Success!</strong> Customer data has successfully been imported from label.
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <h3>Compound</h3>
+                                        <hr />
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="row">
+                                                    <div class="col-md-5" style="padding-right: 0px;">
+                                                        <label class="control-label" style="padding-left:20px;">LT Number</label>
+                                                    </div>
+                                                    <div class="col-md-1" style="padding: 0px 0px 0px 0px;">
+                                                        <p style="text-align: center;"></p>
+                                                    </div>
+                                                    <div class="col-md-4" style="padding-left: 0px;">
+                                                        <label class="control-label">Sequence</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5" style="padding-right: 0px;">
+                                                    <input class="form-control" type="text" id="LTnum">
+                                                </div>
+                                                <div class="col-md-1" style="padding: 0px 0px 0px 0px;">
+                                                    <p style="text-align: center;">_</p>
+                                                </div>
+                                                <div class="col-md-4" style="padding-left: 0px; padding-right: 30px;">
+                                                    <input class="form-control" type="text" id="sequence">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.compound.compountName, htmlAttributes: new { @class = "control-label" })
+                                            @Html.EditorFor(model => model.compound.compountName, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.compound.compountName, "", new { @class = "text-danger" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.compound.Qty, htmlAttributes: new { @class = "control-label" })
+                                            @Html.EditorFor(model => model.compound.Qty, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.compound.Qty, "", new { @class = "text-danger" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.compound.DateReceived, htmlAttributes: new { @class = "control-label" })
+                                            @Html.EditorFor(model => model.compound.DateReceived, new { htmlAttributes = new { @class = "form-control hasDatepicker", type="Date"} })
+                                            @Html.ValidationMessageFor(model => model.compound.DateReceived, "", new { @class = "text-danger" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.compound.ReceivedBy, htmlAttributes: new { @class = "control-label" })
+                                            @Html.EditorFor(model => model.compound.ReceivedBy, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.compound.ReceivedBy, "", new { @class = "text-danger" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.compound.ScheduleDate, htmlAttributes: new { @class = "control-label" })
+                                            @Html.EditorFor(model => model.compound.ScheduleDate, new { htmlAttributes = new { @class = "form-control", type="Date" } })
+                                            @Html.ValidationMessageFor(model => model.compound.ScheduleDate, "", new { @class = "text-danger" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.compound.ActualWeight, htmlAttributes: new { @class = "control-label" })
+                                            @Html.EditorFor(model => model.compound.ActualWeight, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.compound.ActualWeight, "", new { @class = "text-danger" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.compound.MTD, htmlAttributes: new { @class = "control-label" })
+                                            @Html.EditorFor(model => model.compound.MTD, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.compound.MTD, "", new { @class = "text-danger" })
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Animal</label>
+                                            <select class="form-control" id="select">
+                                                <option> -- Select One -- </option>
+                                                <option>true</option>
+                                                <option>false</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Appearance</label>
+                                            <input type="text" class="form-control" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Molecular Mass</label>
+                                            <input type="number" class="form-control" />
+                                        </div>
+                                        <button type="button" class="btn btn-info" id="button" onclick="print()">Record</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+    </div>
+}
+
+<!-- Scan Modal -->
+<div class="modal fade" id="scan" role="dialog" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title" style="text-align: center">Scanning Label</h3>
+            </div>
+            <div class="modal-body">
+                <div class="row" style="text-align: center;">
+                    <div class="col-sm-4">
+                        <h3>Connecting to Scanner<br /></h3>
+                    </div>
+                    <div class="col-sm-4">
+                        <h3>Scanning Label<br /></h3>
+                    </div>
+                    <div class="col-sm-4">
+                        <h3>Finding Record<br /></h3>
+                    </div>
+                </div>
+                <div class="row" style="text-align: center;">
+                    <div class="col-sm-4">
+                        <div id="1_box">
+                            <i class="fa fa-square-o fa-3x" aria-hidden="true"></i>
+                        </div>
+                        <div id="1_wheel" style="display: none;">
+                            <i class="fa fa-refresh fa-spin fa-3x fa-fw margin-bottom"></i>
+                        </div>
+                        <div id="1_check" style="display: none;">
+                            <i class="fa fa-check-square-o fa-3x" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div id="2_box">
+                            <i class="fa fa-square-o fa-3x" aria-hidden="true"></i>
+                        </div>
+                        <div id="2_wheel" style="display: none;">
+                            <i class="fa fa-refresh fa-spin fa-3x fa-fw margin-bottom"></i>
+                        </div>
+                        <div id="2_check" style="display: none;">
+                            <i class="fa fa-check-square-o fa-3x" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div id="3_box">
+                            <i class="fa fa-square-o fa-3x" aria-hidden="true"></i>
+                        </div>
+                        <div id="3_wheel" style="display: none;">
+                            <i class="fa fa-refresh fa-spin fa-3x fa-fw margin-bottom"></i>
+                        </div>
+                        <div id="3_check" style="display: none;">
+                            <i class="fa fa-check-square-o fa-3x" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Print Modal -->
+<div class="modal fade" id="print" role="dialog">
+    <div class="modal-dialog modal-sm" style="max-width: 300px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title" style="text-align: center">Printing New Label</h3>
+            </div>
+            <div class="modal-body">
+                <div class="row" style="text-align: center;">
+                    <div id="p_wheel">
+                        <i class="fa fa-refresh fa-spin fa-3x fa-fw margin-bottom"></i>
+                    </div>
+                    <div id="print_alert" style="display: none">
+                        <div class="alert alert-dismissible alert-success" id="alert" style="display: none;">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <strong style="align-content:center;">Print Successful!</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+
+    })
+
+    function scan() {
+
+        $("#scan").modal("show");
+        $("#scan").modal
+
+        setTimeout(function () {
+            $("div#1_box").remove();
+            $("div#1_wheel").show();
+        }, 1000);
+
+        setTimeout(function () {
+            $("div#1_wheel").remove();
+            $("div#1_check").show();
+        }, 3000);
+
+        setTimeout(function () {
+            $("div#2_box").remove();
+            $("div#2_wheel").show();
+        }, 3500);
+
+        setTimeout(function () {
+            $("div#2_wheel").remove();
+            $("div#2_check").show();
+        }, 5500);
+
+        setTimeout(function () {
+            $("div#3_box").remove();
+            $("div#3_wheel").show();
+        }, 6000);
+
+        setTimeout(function () {
+            $("div#3_wheel").remove();
+            $("div#3_check").show();
+        }, 7000);
+
+        setTimeout(function () {
+            $("#scan").modal("hide");
+            document.getElementById("customer_ContactName").value = "Chris Bacon";
+            document.getElementById("customer_OrganizationName").value = "PharmTech, Inc.";
+            document.getElementById("customer_CustEmail").value = "chris.p.bacon@pharmtech.com";
+            document.getElementById("compound_compountName").value = "clay";
+            document.getElementById("compound_ReceivedBy").value = "Kelly Vaughn";
+            document.getElementById("LTnum").value = "014567";
+            document.getElementById("sequence").value = "4"
+            $("#button").remove();
+            $("#scan_alert").show();
+        }, 8000)
+    }
+
+    function print() {
+
+        $("#print").modal("show");
+
+        setTimeout(function () {
+            $("p_wheel").remove();
+            $("div#print_alert").show();
+        }, 4000);
+
+        setTimeout(function() {
+            $("#print").modal("hide");
+            window.location = "http://localhost:42450/StaffPortal/Receiving/Index"
+        }, 7000)
+    }
+</script>

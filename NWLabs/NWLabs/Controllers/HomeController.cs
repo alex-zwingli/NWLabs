@@ -21,6 +21,16 @@ namespace NWLabs.Controllers
             return View();
         }
 
+        public ActionResult StaffLogin()
+        {
+            return View();
+        }
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+
         // Service Page - Future
 
 

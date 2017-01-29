@@ -16,7 +16,9 @@
 else
 {
     <ul class="nav navbar-nav navbar-right">
-        <li>@Html.ActionLink("Client Portal", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        <li>@Html.ActionLink("Staff Portal", "StaffLogin", "Home", new { area = "" }, htmlAttributes: new { id = "loginLink" })</li>
+        <li><a> | </a></li>
+        <li>@Html.ActionLink("Client Portal", "Login", "Home", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
             <ul id="login-dp" class="dropdown-menu">
@@ -34,7 +36,7 @@ else
                                     <div class="help-block text-right"><a href="">Forget the password ?</a></div>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                    <a href="/" class="btn btn-primary btn-block">Sign In</a>
                                 </div>
                                 <div class="checkbox">
                                     <label>
@@ -44,7 +46,7 @@ else
                             </form>
                         </div>
                         <div class="bottom text-center">
-                            @Html.ActionLink("New Client Registration", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
+                            @Html.ActionLink("New Client Registration", "Login", "Home")
                         </div>
                     </div>
                 </li>
